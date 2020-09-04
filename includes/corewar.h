@@ -6,7 +6,7 @@
 /*   By: jremarqu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/28 22:26:57 by jremarqu          #+#    #+#             */
-/*   Updated: 2020/09/04 19:31:53 by jremarqu         ###   ########.fr       */
+/*   Updated: 2020/09/04 20:08:08 by jremarqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,13 +25,14 @@
 #include <string.h>
 
 
-typedef struct s_champ	t_champ;
+typedef struct s_vm	t_vm;
 
-struct					s_champ
+struct					s_vm
 {
     char				*arr_name;
     char				*arr_comment;
-    unsigned char		*exet_code;
+    uint8_t             *code;
+    int32_t             
 };
 
 #endif
