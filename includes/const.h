@@ -1,31 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   corewar.c                                          :+:      :+:    :+:   */
+/*   const.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jremarqu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/04 19:29:55 by jremarqu          #+#    #+#             */
-/*   Updated: 2020/09/04 20:22:12 by jremarqu         ###   ########.fr       */
+/*   Created: 2020/09/04 20:44:04 by jremarqu          #+#    #+#             */
+/*   Updated: 2020/09/04 23:49:16 by jremarqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "corewar.h"
+#ifndef CONST_H
 
-//swift book
-//reywanderlikh 
-//
+# define CONST_H
+
+# define MEM_SIZE (4*1024)
+# define PLYR_NBRS 4
+# define CYCLE_TO_DIE 10000 //what is the nbr in subject? Check it
 
 
-
-int main(int argc, char **argv)
-{
-	t_vm *vm;
-	
-	if (argc >= 2)
-	{
-		init_virtual_machine(vm);
-		parse_args(argc, argv, vm);
-		// launch_virtual_machine(vm); запускаем виртуальную машину и курсор в машине))
-	}
-}
+#endif
