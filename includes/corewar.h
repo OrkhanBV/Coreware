@@ -6,7 +6,7 @@
 /*   By: jremarqu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/28 22:26:57 by jremarqu          #+#    #+#             */
-/*   Updated: 2020/09/04 23:52:50 by jremarqu         ###   ########.fr       */
+/*   Updated: 2020/09/08 01:24:11 by jremarqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,9 +36,15 @@ typedef	struct			s_process
 
 typedef struct			s_player
 {
-    char				*arr_name;
-    char				*arr_comment;
+    int32_t             id_player;
+    char				*name_plyr;
+    char				*comment_plyr;
+    uint32_t            code_size;
     uint8_t             *code;
+    size_t              current_lives_num;
+    size_t              previous_lives_num;
+    ssize_t             last_live;
+    struct s_player     *next;
 }						t_player;
 
 typedef struct			s_vm
@@ -58,8 +64,8 @@ typedef struct			s_vm
     
     size_t				nbr_of_checks;
     
-    ssize_t				dumping_nbr;
-    int					dump_flag; // ??
+    ssize_t				dumping_nbr; // nbr_cycles;
+    int					dump_flag; // print mod
     
     int					log; // ??
     int					checknbr; //??

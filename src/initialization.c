@@ -6,7 +6,7 @@
 /*   By: jremarqu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/04 20:24:29 by jremarqu          #+#    #+#             */
-/*   Updated: 2020/09/04 23:53:14 by jremarqu         ###   ########.fr       */
+/*   Updated: 2020/09/08 01:24:35 by jremarqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,4 +43,22 @@ t_vm    *initilization_vm()
     vm->checknbr = 0; //
     //// we have to check how it works??
     return (vm);
+}
+
+t_player	*init_player(int id)
+{
+	t_player *player;
+
+	if (!(player = (t_player *)ft_memalloc(sizeof(t_player))))
+		terminate(ERR_PLAYER_INIT);
+	player->id_player = id;
+	player->name_plyr = NULL;
+	player->comment_plyr = NULL;
+	player->code_size = 0;
+	player->code= NULL;
+	player->last_live = 0;
+	player->current_lives_num = 0;
+	player->previous_lives_num = 0;
+	player->next = NULL;
+	return (player);
 }
