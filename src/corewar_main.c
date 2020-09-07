@@ -6,7 +6,7 @@
 /*   By: jremarqu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/04 19:29:55 by jremarqu          #+#    #+#             */
-/*   Updated: 2020/09/08 01:30:13 by jremarqu         ###   ########.fr       */
+/*   Updated: 2020/09/08 01:34:02 by jremarqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -160,10 +160,7 @@ t_player		*parse_champion(char *filename, int id)
 
 }
 
-static void	parse_champion_filename(int *argc,
-									char ***argv,
-									t_vm *vm,
-									t_player **list)
+static void	parse_champion_filename(int *argc, char ***argv, t_vm *vm, t_player **list)
 {
 	int32_t id;
 
