@@ -6,7 +6,7 @@
 /*   By: jremarqu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/04 20:24:29 by jremarqu          #+#    #+#             */
-/*   Updated: 2020/09/08 01:24:35 by jremarqu         ###   ########.fr       */
+/*   Updated: 2020/09/10 14:04:42 by jremarqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ t_player	*init_player(int id)
 	t_player *player;
 
 	if (!(player = (t_player *)ft_memalloc(sizeof(t_player))))
-		terminate(ERR_PLAYER_INIT);
+		printf("Error player init\n");
 	player->id_player = id;
 	player->name_plyr = NULL;
 	player->comment_plyr = NULL;

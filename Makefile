@@ -6,7 +6,7 @@
 #    By: jremarqu <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/09/04 22:48:44 by jremarqu          #+#    #+#              #
-#    Updated: 2020/09/05 00:05:54 by jremarqu         ###   ########.fr        #
+#    Updated: 2020/09/10 16:11:40 by jremarqu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,7 +37,8 @@ OBJ_DIR = ./objects/
 
 INCLUDES_FILES_LIST =					\
 				corewar.h				\
-				const.h
+				const.h					\
+				op.h					\
 
 INCLUDES_DIR = 	./includes/
 
@@ -55,7 +56,9 @@ LIBFT_MAIN_DIR =				\
 
 PUSH_SWAP_SRC_NAME = 			\
 	corewar_main.c				\
-	initialization.c 
+	initialization.c 			\
+	parsing.c					\
+	adding_player.c				
 
 FLAGS = 	-Wall -Werror -Wextra
 

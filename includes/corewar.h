@@ -6,7 +6,7 @@
 /*   By: jremarqu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/28 22:26:57 by jremarqu          #+#    #+#             */
-/*   Updated: 2020/09/08 01:24:11 by jremarqu         ###   ########.fr       */
+/*   Updated: 2020/09/10 16:28:50 by jremarqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@
 
 # include "const.h"
 # include "libft.h"
+# include "op.h"
+# include <fcntl.h>
 // # include "ft_printf.h"
 // # include "gnl.h"
 // # include "list.h"
@@ -50,7 +52,7 @@ typedef struct			s_player
 typedef struct			s_vm
 {
     uint8_t             war_graund[MEM_SIZE];
-	t_player			*players[PLYR_NBRS];
+	t_player			*players[MAX_PLAYERS];
 	int32_t				plyrs_nbr;
 	t_player			*plyr_winner; //last_alive
 	
@@ -71,6 +73,9 @@ typedef struct			s_vm
     int					checknbr; //??
 }						t_vm;
 
-t_vm    *initilization_vm(void);
+t_vm        *initilization_vm(void);
+t_player	*init_player(int id);
+void	    parsing_main(int argc, char **argv, t_vm *vm);
+t_player	*find_player(t_player *list, int32_t id);
 
 #endif
